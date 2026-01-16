@@ -6,6 +6,10 @@ A MicroPython project for the Raspberry Pi Pico W microcontroller, implementing 
 
 This project provides a structured approach to managing I/O operations on the Raspberry Pi Pico W using MicroPython. It features a robust pin management system with support for edge detection and event-driven programming.
 
+## Pinout Diagram
+
+![Raspberry Pi Pico W Pinout](https://datasheets.raspberrypi.com/picow/PicoW-A4-Pinout.png)
+
 ## Features
 
 - Organized I/O pin management through the `BoardIO` class

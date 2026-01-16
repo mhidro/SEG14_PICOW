@@ -1,5 +1,8 @@
 from boardio import BoardIO, EdgeTriggerPin, machine
+from ht16k33 import HT16K33Segment
+
 import asyncio
+
 
 # Create BoardIO instance
 board_io = BoardIO()
@@ -39,7 +42,7 @@ async def toggle_led(led_builtin, time_ms):
             # Normal blinking
             led_builtin.toggle()
 
-        await asyncio.sleep_ms(abs(time_ms) if time_ms != 0 else 50)  # Use absolute value, treat 0 as 50ms wait
+        await asyncio.sleep_ms(abs(time_ms) if time_ms < 7  else 50)  # Use absolute value, treat 0 as 50ms wait
 
 async def main_loop():
     print("Entering main loop...")    
